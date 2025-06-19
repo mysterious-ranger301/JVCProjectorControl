@@ -12,4 +12,5 @@ Upon first launch the app should have a guide to help you get set up, but if not
 5. You can now turn the projector on by pressing the ON button, or if you're done using it you can press the OFF button.
 6. The rest of the buttons are just like the remote, the arrow keys are used for navigation, the menu button is used to access the menu, the back button is used to go back, etc.
 7. If you have any issues, please post an issue in the issues section of the repository.
+
 Note: This app only works with ONE projector on the network. If you have multiple, then you must find the IP of the one you wish to control and type it into the field above.
