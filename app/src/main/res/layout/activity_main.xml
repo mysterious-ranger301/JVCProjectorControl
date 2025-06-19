@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="-70dp">
+
+        <Button
+            android:id="@+id/info_btn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            app:icon="@drawable/info_icon"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menu_btn" />
+
+        <Button
+            android:id="@+id/autodetect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="1dp"
+            android:text="Auto-detect"
+            app:layout_constraintEnd_toEndOf="@+id/ip_field"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/ip_field"
+            app:layout_constraintTop_toBottomOf="@+id/ip_field" />
+
+        <Button
+            android:id="@+id/off_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="50dp"
+            android:text="Off"
+            app:layout_constraintEnd_toStartOf="@+id/on_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/status_text" />
+
+        <Button
+            android:id="@+id/on_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-50dp"
+            android:layout_marginEnd="64dp"
+            android:text="On"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/off_btn"
+            app:layout_constraintTop_toTopOf="@+id/off_btn" />
+
+        <Button
+            android:id="@+id/up_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="up"
+            app:icon="@drawable/arrow_upward"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/off_btn" />
+
+        <Button
+            android:id="@+id/left_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="106dp"
+            android:contentDescription="left"
+            app:icon="@drawable/chevron_left"
+            app:iconGravity="textStart"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ok_btn"
+            app:layout_constraintEnd_toEndOf="@+id/ok_btn"
+            app:layout_constraintTop_toBottomOf="@+id/up_btn" />
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="12dp"
+            android:text="OK"
+            app:layout_constraintEnd_toEndOf="@+id/up_btn"
+            app:layout_constraintTop_toBottomOf="@+id/up_btn" />
+
+        <Button
+            android:id="@+id/right_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="106dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="right"
+            app:icon="@drawable/chevron_right"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ok_btn"
+            app:layout_constraintStart_toStartOf="@+id/ok_btn"
+            app:layout_constraintTop_toBottomOf="@+id/up_btn" />
+
+        <Button
+            android:id="@+id/down_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="down"
+            app:icon="@drawable/arrow_downward"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:layout_constraintEnd_toEndOf="@+id/ok_btn"
+            app:layout_constraintStart_toStartOf="@+id/ok_btn"
+            app:layout_constraintTop_toBottomOf="@+id/ok_btn" />
+
+        <Button
+            android:id="@+id/menu_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="menu"
+            app:icon="@drawable/menu"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:layout_constraintStart_toStartOf="@+id/left_btn"
+            app:layout_constraintTop_toBottomOf="@+id/down_btn" />
+
+        <Button
+            android:id="@+id/back_btn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="back"
+            app:icon="@drawable/undo"
+            app:iconGravity="textEnd"
+            app:iconPadding="0dp"
+            app:iconSize="28dp"
+            app:layout_constraintEnd_toEndOf="@+id/right_btn"
+            app:layout_constraintTop_toBottomOf="@+id/down_btn" />
+
+        <EditText
+            android:id="@+id/ip_field"
+            android:layout_width="189dp"
+            android:layout_height="72dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Projector IP"
+            android:inputType="text|textNoSuggestions"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/connect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="28dp"
+            android:text="Connect"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.306"
+            app:layout_constraintStart_toEndOf="@+id/ip_field"
+            app:layout_constraintTop_toTopOf="@+id/ip_field" />
+
+        <Button
+            android:id="@+id/disconnect_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Disconnect"
+            app:layout_constraintStart_toEndOf="@+id/ip_field"
+            app:layout_constraintStart_toStartOf="@+id/connect_btn"
+            app:layout_constraintTop_toBottomOf="@+id/connect_btn" />
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="378dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="4dp"
+            android:rotationX="0"
+            android:text="Status: Not connected"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/ip_field"
+            app:layout_constraintTop_toBottomOf="@+id/autodetect_btn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
