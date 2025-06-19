@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupButton(int buttonId, String commandHex) {
         Button btn = findViewById((buttonId));
         btn.setOnClickListener((View v) -> {
-            if (commandHex == "21 89 01 50 57 30 0A") { // if power off
+            if (commandHex == "21 89 01 50 57 30 0A" && !(socket == null || socket.isClosed())) { // if power off (and connected)
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Confirm Power Off")
                         .setMessage("Are you sure you want to power off?")
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                 new Thread(() -> sendCommand(commandHex)).start();
                 v.performHapticFeedback(HapticFeedbackConstants.LONG_PRESS);
             }
-            if (commandHex == "21 89 01 50 57 31 0A") { // if power on
+            if (commandHex == "21 89 01 50 57 31 0A" && !(socket == null || socket.isClosed())) { // if power on (and connected)
                 status_text.setText("Status: Connected, powered ON");
             }
         });
@@ -148,7 +148,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void poweroff() {
         new Thread(() -> sendCommand("21 89 01 50 57 30 0A")).start();
-        status_text.setText("Status: Connected, powered OFF");
+        if (!(socket == null || socket.isClosed())) {
+            status_text.setText("Status: Connected, powered OFF");
+        }
     }
 
     private void connectToProjector() {
