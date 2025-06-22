@@ -1,7 +1,7 @@
 # JVC Projector Control
 This is an Android app to control your JVC projector over the network. 
 # Installation
-In releases, download the APK, install it, and that's it. 
+In releases (https://github.com/mysterious-ranger301/JVCProjectorControl/releases/download/release/JVCProjectorControl.apk), download the APK, install it, and that's it. 
 # Usage
 Upon first launch the app should have a guide to help you get set up, but if not the instructions are here as well.
 "This app is a remote to control most JVC projectors. In order to work properly, please ensure you have done the following:
